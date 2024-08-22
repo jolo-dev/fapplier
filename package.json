@@ -1,0 +1,53 @@
+{
+  "name": "fapplier",
+  "displayName": "Fapplier",
+  "version": "0.0.1",
+  "author": "**",
+  "description": "",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "vanilla",
+    "vite",
+    "create-chrome-ext"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite & npx ghosttp --dir ./src/functions/",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "fmt": "biome fmt --write '**/*.{ts,json,css,scss,md}'",
+    "zip": "pnpm run build && zip -r fapplier.zip build/",
+    "test": "vitest --testTimeout 50000"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@crxjs/vite-plugin": "^2.0.0-beta.19",
+    "@types/chrome": "^0.0.246",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@ai-sdk/google-vertex": "^0.0.4",
+    "@fusionauth/typescript-client": "^1.50.0",
+    "@google-cloud/functions-framework": "^3.4.0",
+    "@langchain/community": "^0.2.5",
+    "@langchain/core": "^0.2.5",
+    "@langchain/google-vertexai": "^0.0.17",
+    "ai": "^3.1.22",
+    "cheerio": "1.0.0-rc.12",
+    "document_loaders": "link:@langchain/community/document_loaders",
+    "langchain": "^0.2.4",
+    "passport": "^0.7.0",
+    "passport-oauth2": "^1.8.0",
+    "pdf": "link:@langchain/community/document_loaders/fs/pdf",
+    "pdf-parse": "^1.1.1",
+    "showdown": "^2.1.0",
+    "vanjs-core": "^1.5.0"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}
